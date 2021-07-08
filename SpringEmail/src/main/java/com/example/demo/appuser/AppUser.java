@@ -34,6 +34,7 @@ public class AppUser implements UserDetails {
 	private String LastName;
 	private String email;
 	private String password;
+	private String phoneNumber;
 	@Enumerated(EnumType.STRING)
 	private AppUserRole role;
 	private Boolean locked = false;
@@ -45,6 +46,15 @@ public class AppUser implements UserDetails {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+	
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getFirstName() {
@@ -99,15 +109,18 @@ public class AppUser implements UserDetails {
 		this.password = password;
 	}
 
-	public AppUser(String name, String userName, String email, String password, AppUserRole role) {
+	public AppUser(String firstName, String lastName, String email, String password, String phoneNumber,
+			AppUserRole role) {
 		super();
-		this.FirstName = name;
-		this.LastName = userName;
+		FirstName = firstName;
+		LastName = lastName;
 		this.email = email;
 		this.password = password;
+		this.phoneNumber = phoneNumber;
 		this.role = role;
-
+		
 	}
+
 	public AppUser() {}
 
 	@Override

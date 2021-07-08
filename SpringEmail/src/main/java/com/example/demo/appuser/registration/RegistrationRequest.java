@@ -1,5 +1,7 @@
 package com.example.demo.appuser.registration;
 
+import javax.validation.constraints.NotBlank;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -17,6 +19,9 @@ public class RegistrationRequest {
 	private String lastName;
 	private String email;
 	private String password;
+	@NotBlank
+	private String phoneNumber;
+	
 	public String getEmail() {
 		return email;
 	}
@@ -41,5 +46,21 @@ public class RegistrationRequest {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public RegistrationRequest(String firstName, String lastName, String email, String password, String phoneNumber) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+		this.phoneNumber = phoneNumber;
+	}
+	
+	
 	
 }

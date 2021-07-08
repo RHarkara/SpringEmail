@@ -1,5 +1,7 @@
 package com.example.demo.appuser.registration;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +21,7 @@ public class RegistratioController {
 	private RegistrationService registrationService;
 
 	@PostMapping("data")
-	public String register(@RequestBody RegistrationRequest request) {
+	public String register(@Valid @RequestBody RegistrationRequest request) {
 		return registrationService.register(request);
 	}
 
