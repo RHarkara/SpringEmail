@@ -1,6 +1,7 @@
 package com.example.demo.appuser.registration;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -52,14 +53,7 @@ public class RegistrationRequest {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public RegistrationRequest(String firstName, String lastName, String email, String password, String phoneNumber) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.password = password;
-		this.phoneNumber = phoneNumber;
-	}
+
 	
 	
 	

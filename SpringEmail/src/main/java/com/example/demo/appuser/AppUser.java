@@ -1,6 +1,6 @@
 package com.example.demo.appuser;
 
-import java.util.Collection;
+import java.util.Collection; 
 import java.util.Collections;
 
 import javax.persistence.Entity;
@@ -121,7 +121,7 @@ public class AppUser implements UserDetails {
 		
 	}
 
-	public AppUser() {}
+	
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -93,7 +93,5 @@ public class ConfirmationToken {
 		this.appUser = appUser;
 	}
 
-	public ConfirmationToken() {
-	}
-
+	
 }
